@@ -15,7 +15,7 @@ proxies:
   reality-opts:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇨🇭 CH 02 - xiaohe
   type: vless
   server: 208.69.78.217
@@ -44,18 +44,28 @@ proxies:
   udp: true
 - name: 🇨🇭 CH 05 - xiaohe
   type: vless
-  server: 142.91.101.39
-  port: 627
-  uuid: 3f87daa8-3af8-40a0-b655-127911e008dc
+  server: 45.133.151.186
+  port: 25393
+  uuid: d54a7512-dda3-4218-8ae7-c591d300fd7c
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: 7nnoiou0z.3xn99hzq2sh7iekktpkeq7rofs3qc8iohrqs4pb9p.workers.dev
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 7nnoiou0z.3xn99hzq2sh7iekktpkeq7rofs3qc8iohrqs4pb9p.workers.dev
+  reality-opts:
+    public-key: 04F4vhrx_H_SHsrsVw1eCpwlysu4kL3hTl9GAr00XkI
+  servername: www.samsung.com
+  client-fingerprint: firefox
+- name: 🇨🇭 CH 06 - xiaohe
+  type: vless
+  server: 208.69.78.217
+  port: 2053
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
+  servername: www.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -66,6 +76,7 @@ proxy-groups:
   - 🇨🇭 CH 03 - xiaohe
   - 🇨🇭 CH 04 - xiaohe
   - 🇨🇭 CH 05 - xiaohe
+  - 🇨🇭 CH 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -76,5 +87,6 @@ proxy-groups:
   - 🇨🇭 CH 03 - xiaohe
   - 🇨🇭 CH 04 - xiaohe
   - 🇨🇭 CH 05 - xiaohe
+  - 🇨🇭 CH 06 - xiaohe
 rules:
 - MATCH,PROXIES
